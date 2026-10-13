@@ -17,7 +17,54 @@
 
 #include <stdio.h>
 
-int main(void) {
-    // TODO: write your code here, following the steps above
+
+int main(void)
+{
+    double bill, tip, percentage, total;
+    char answer;
+    double N = 1;
+
+
+
+    printf("Enter bill amount: ");
+    scanf("%lf",&bill);
+
+    printf("Enter tip percentage: ");
+    scanf("%lf", &percentage);
+
+
+            printf("Do you wish to split the bill?(Type Y/N):");
+            scanf(" %c", &answer);
+
+            if (answer == 'y' || answer == 'Y')
+            {
+                printf("How many people would you like to split with: \n");
+                scanf("%lf", &N);
+                bill = bill / N;
+            }
+            else if ( answer == 'n' || answer == 'N')
+            {
+                printf("Please pay amount below! \n");
+            }
+            else
+            {
+                printf("Please enter (Y/N): \n");
+            }
+
+
+
+
+
+
+    percentage = percentage / 100;
+    tip = bill*percentage;
+
+
+    total=bill+tip;
+
+    printf("Your bill is %.2f, the total amount due is %.2f\n", bill, total);
+
+
+
     return 0;
 }
