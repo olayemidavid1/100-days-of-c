@@ -29,6 +29,7 @@ int main(void)
     printf("Enter bill amount: ");
     scanf("%lf",&bill);
 
+
     printf("Enter tip percentage: ");
     scanf("%lf", &percentage);
 
